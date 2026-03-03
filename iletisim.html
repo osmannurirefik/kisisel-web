@@ -4,18 +4,35 @@
   <meta charset="UTF-8">
   <title>İletişim</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html">Hakkımda</a>
-  <a href="hobiler.html">Hobilerim</a>
+  <a href="index.html">Hakkımda</a> |
+  <a href="Hobilerim.html">Hobilerim</a> |
   <a href="iletisim.html">İletişim</a>
 </nav>
 
 <h1 class="fade-in">İletişim</h1>
-<p>Kurumsal E-posta: onuri.refik@csb.gov.tr</p>
-<p>Kişisel E-posta: refikosmannuri@gmail.com</p>
+<p>Email: osmannuri@example.com</p>
+<p>Telefon: +90 555 555 5555</p>
+
+<!-- Harita -->
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var map = L.map('map').setView([39.91, 32.61], 7);
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+
+  L.marker([39.91, 32.61]).addTo(map).bindPopup("Çalıştığım Şehir: Ankara");
+});
+</script>
 
 </body>
 </html>
