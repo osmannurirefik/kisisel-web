@@ -1,13 +1,19 @@
+/* Genel stiller */
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
-  text-align: center;
+  background: #f7f7f7;
 }
 
 nav a {
   margin-right: 15px;
   text-decoration: none;
   font-weight: bold;
+  color: #0052cc;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* Fade animasyon */
@@ -18,6 +24,19 @@ nav a {
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+/* Profil fotoğrafı */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+
+/* Harita */
+#map {
+  height: 400px;
+  margin-top: 20px;
 }
 
 /* Uzaktan Algılama Animasyonu */

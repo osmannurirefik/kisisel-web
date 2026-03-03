@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <title>Hobilerim</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
 
 <nav>
-  <a href="index.html">Hakkımda</a>
-  <a href="hobiler.html">Hobilerim</a>
-  <a href="iletisim.html">İletişim</a>
+  <a href="index.html">Hakkımda</a> |
+  <a href="Hobilerim.html">Hobilerim</a> |
+  <a href="Iletisim.html">İletişim</a>
 </nav>
 
 <h1 class="fade-in">Hobilerim</h1>
@@ -27,15 +27,9 @@
     attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // 3 KONUM
-  L.marker([39.91, 32.61]).addTo(map)
-    .bindPopup("Ankara");
-
-  L.marker([40.50, 32.70]).addTo(map)
-    .bindPopup("Kızılcahamam");
-
-  L.marker([40.31, 32.93]).addTo(map)
-    .bindPopup("Baraj Göleti");
+  L.marker([39.91, 32.61]).addTo(map).bindPopup("Ankara");
+  L.marker([40.50, 32.70]).addTo(map).bindPopup("Kızılcahamam");
+  L.marker([40.31, 32.93]).addTo(map).bindPopup("Baraj Göleti");
 </script>
 
 </body>
