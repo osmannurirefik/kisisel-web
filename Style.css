@@ -1,31 +1,69 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kişisel Web Sayfası</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Genel stiller */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
 
-  <!-- Navigasyon -->
-  <nav>
-    <a href="index.html">Anasayfa</a>
-    <a href="Hobilerim.html">Hobilerim</a>
-    <a href="iletisim.html">İletişim</a>
-  </nav>
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-  <!-- Hoşgeldiniz metni -->
-  <h1 class="fade-in">Hoş geldiniz!</h1>
-  <p class="fade-in" style="animation-delay: 1s;">GitHub Pages ile çalışan animasyonlu web sayfam.</p>
+/* Harita */
+#map {
+  height: 400px;
+  margin-top: 20px;
+}
 
-  <!-- Uzaktan algılama animasyonu -->
-  <div class="space fade-in" style="animation-delay: 2s;">
-    <div class="earth"></div>
-    <div class="orbit">
-      <div class="satellite"></div>
-    </div>
-  </div>
+/* Fade animasyon */
+.fade-in {
+  animation: fadeIn 2s ease-in;
+}
 
-</body>
-</html>
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Uzaktan Algılama Animasyonu */
+.space {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 40px auto;
+}
+
+.earth {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #4facfe, #0052cc);
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+}
+
+.orbit {
+  width: 200px;
+  height: 200px;
+  border: 1px dashed #aaa;
+  border-radius: 50%;
+  position: absolute;
+  animation: rotateOrbit 6s linear infinite;
+}
+
+.satellite {
+  width: 16px;
+  height: 16px;
+  background: #555;
+  position: absolute;
+  top: -8px;
+  left: 92px;
+  border-radius: 3px;
+}
+
+@keyframes rotateOrbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
